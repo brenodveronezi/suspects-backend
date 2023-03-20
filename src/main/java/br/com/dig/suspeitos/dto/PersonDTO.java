@@ -1,11 +1,13 @@
 package br.com.dig.suspeitos.dto;
 
+import br.com.dig.suspeitos.entity.ImageData;
 import br.com.dig.suspeitos.entity.Occurrences;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -43,4 +45,7 @@ public class PersonDTO {
     private ParticularsDTO particulars;
 
     private TattoosDTO tattoos;
+
+    private ImageData image;
+
 }

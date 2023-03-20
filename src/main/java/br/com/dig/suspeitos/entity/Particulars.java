@@ -30,7 +30,7 @@ public class Particulars {
     private String hairType;
 
     @Column(nullable = false)
-    private String skinHair;
+    private String hairColor;
 
     @Column(nullable = false)
     private Integer weight;

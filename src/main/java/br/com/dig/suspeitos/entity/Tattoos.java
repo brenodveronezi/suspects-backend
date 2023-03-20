@@ -17,67 +17,67 @@ public class Tattoos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean face;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftBack;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightBack;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftChest;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightChest;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftBelly;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightBelly;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftLeg;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightLeg;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftFeet;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightFeet;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftArm;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightArm;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftForearm;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightForearm;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftHand;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightHand;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean leftNeck;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean rightNeck;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean scar;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Boolean deformity;
 
 }

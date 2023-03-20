@@ -1,5 +1,6 @@
 package br.com.dig.suspeitos.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,6 +33,7 @@ public class Person {
     private String surname;
 
     @Column(nullable = false)
+    //@JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate birthDate;
 
     @Column(nullable = false)
@@ -55,7 +57,7 @@ public class Person {
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private Address address;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Occurrences> occurrences;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -63,5 +65,9 @@ public class Person {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Tattoos tattoos;
+
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "image_data_id")
+    private ImageData image;
 
 }

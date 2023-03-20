@@ -21,7 +21,7 @@ public class ParticularsDTO {
 
     private String hairType;
 
-    private String skinHair;
+    private String hairColor;
 
     private Integer weight;
 

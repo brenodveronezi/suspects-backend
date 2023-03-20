@@ -21,7 +21,7 @@ public class Occurrences {
     private Long id;
 
     @Column(nullable = true)
-    private String date;
+    private LocalDate date;
 
     @Column(nullable = true)
     private String procedure;
