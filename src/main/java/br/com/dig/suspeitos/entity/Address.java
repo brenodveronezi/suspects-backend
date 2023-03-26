@@ -30,9 +30,12 @@ public class Address {
     private Integer number;
 
     @Column(nullable = false)
-    private Long zipCode;
+    //private Long zipCode;
+    private long zip_code;
 
     @Column(nullable = true)
     private String complement;
+
+
 
 }

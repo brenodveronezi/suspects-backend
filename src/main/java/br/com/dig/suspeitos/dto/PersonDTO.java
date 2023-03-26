@@ -48,4 +48,15 @@ public class PersonDTO {
 
     private ImageData image;
 
+    //Adicionado para o funcionamento do JasperReport, necessário editar o relatório e remover essas variáveis.
+    private Long address_id;
+
+    private Long particulars_id;
+
+    private Long tattoos_id;
+
+    private Long occurrences_id;
+
+    private Long image_data_id;
+
 }
