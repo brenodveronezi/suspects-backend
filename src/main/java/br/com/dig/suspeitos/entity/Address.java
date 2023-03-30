@@ -32,7 +32,8 @@ public class Address {
     @Column(nullable = false)
     private Long zipCode;
 
-    @Column(nullable = true)
     private String complement;
+
+
 
 }

@@ -17,45 +17,45 @@ public class TattoosDTO {
 
     private Long id;
 
-    private Boolean face;
+    private String face;
 
-    private Boolean leftBack;
+    private String leftBack;
 
-    private Boolean rightBack;
+    private String rightBack;
 
-    private Boolean leftChest;
+    private String leftChest;
 
-    private Boolean rightChest;
+    private String rightChest;
 
-    private Boolean leftBelly;
+    private String leftBelly;
 
-    private Boolean rightBelly;
+    private String rightBelly;
 
-    private Boolean leftLeg;
+    private String leftLeg;
 
-    private Boolean rightLeg;
+    private String rightLeg;
 
-    private Boolean leftFeet;
+    private String leftFeet;
 
-    private Boolean rightFeet;
+    private String rightFeet;
 
-    private Boolean leftArm;
+    private String leftArm;
 
-    private Boolean rightArm;
+    private String rightArm;
 
-    private Boolean leftForearm;
+    private String leftForearm;
 
-    private Boolean rightForearm;
+    private String rightForearm;
 
-    private Boolean leftHand;
+    private String leftHand;
 
-    private Boolean rightHand;
+    private String rightHand;
 
-    private Boolean leftNeck;
+    private String leftNeck;
 
-    private Boolean rightNeck;
+    private String rightNeck;
 
-    private Boolean scar;
+    private String scar;
 
-    private Boolean deformity;
+    private String deformity;
 }

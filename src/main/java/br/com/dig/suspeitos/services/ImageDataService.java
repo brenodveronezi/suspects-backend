@@ -34,13 +34,28 @@ public class ImageDataService {
                         image.getId()));
     }
 
+    public ResponseEntity<ImageUploadResponse> update(String id, MultipartFile file) throws IOException {
+
+        Optional<ImageData> imageToUpdate = imageDataRepository.findById(id);
+
+        ImageData image = imageDataRepository.save(ImageData.builder()
+                .id(imageToUpdate.orElseThrow().getId())
+                .name(file.getOriginalFilename())
+                .type(file.getContentType())
+                .data(ImageUtil.compressImage(file.getBytes())).build());
+
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(new ImageUploadResponse(
+                        image.getId()));
+    }
+
 
     public ResponseEntity<byte[]> getImage(String id) {
         Optional<ImageData> dbImage = imageDataRepository.findById(id);
 
         return ResponseEntity
                 .ok()
-                .contentType(MediaType.valueOf(dbImage.get().getType()))
+                .contentType(MediaType.valueOf(dbImage.orElseThrow().getType()))
                 .body(ImageUtil.decompressImage(dbImage.get().getData()));
     }
 }

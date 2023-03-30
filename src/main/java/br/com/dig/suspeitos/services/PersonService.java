@@ -9,9 +9,7 @@ import br.com.dig.suspeitos.response.MessageResponseDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,9 +23,15 @@ public class PersonService {
 
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
 
-    public Person createPerson(PersonDTO personDTO) throws IOException {
+    public Person createPerson(PersonDTO personDTO) {
         Person personToSave = personMapper.toModel(personDTO);
         return personRepository.save(personToSave);
+    }
+
+    public Person updatePerson(Long id, PersonDTO personDTO) throws PersonNotFoundException {
+        verifyIfExists(id);
+        Person personToUpdate = personMapper.toModel(personDTO);
+        return personRepository.save(personToUpdate);
     }
 
     public List<PersonDTO> listAll(){
@@ -39,6 +43,11 @@ public class PersonService {
         Person person = personRepository.findById(id)
                 .orElseThrow(() -> new PersonNotFoundException(id));
         return personMapper.toDTO(person);
+    }
+
+    private void verifyIfExists(Long id) throws PersonNotFoundException {
+        personRepository.findById(id)
+                .orElseThrow(() -> new PersonNotFoundException(id));
     }
 
     private MessageResponseDTO createMessageResponse(Long id, String message) {

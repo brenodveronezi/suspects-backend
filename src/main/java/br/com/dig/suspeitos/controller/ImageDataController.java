@@ -22,6 +22,11 @@ public class ImageDataController {
         return imageDataService.store(file);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateImageData(@PathVariable String id, @RequestParam("image") MultipartFile file) throws IOException {
+        return imageDataService.update(id, file);
+    }
+
 
     @GetMapping("/{id}" )
     public ResponseEntity<byte[]> getImageByName(@PathVariable("id") String id){

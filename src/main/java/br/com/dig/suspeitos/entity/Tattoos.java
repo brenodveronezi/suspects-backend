@@ -17,67 +17,46 @@ public class Tattoos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = true)
-    private Boolean face;
+    private String face;
 
-    @Column(nullable = true)
-    private Boolean leftBack;
+    private String leftBack;
 
-    @Column(nullable = true)
-    private Boolean rightBack;
+    private String rightBack;
 
-    @Column(nullable = true)
-    private Boolean leftChest;
+    private String leftChest;
 
-    @Column(nullable = true)
-    private Boolean rightChest;
+    private String rightChest;
 
-    @Column(nullable = true)
-    private Boolean leftBelly;
+    private String leftBelly;
 
-    @Column(nullable = true)
-    private Boolean rightBelly;
+    private String rightBelly;
 
-    @Column(nullable = true)
-    private Boolean leftLeg;
+    private String leftLeg;
 
-    @Column(nullable = true)
-    private Boolean rightLeg;
+    private String rightLeg;
 
-    @Column(nullable = true)
-    private Boolean leftFeet;
+    private String leftFeet;
 
-    @Column(nullable = true)
-    private Boolean rightFeet;
+    private String rightFeet;
 
-    @Column(nullable = true)
-    private Boolean leftArm;
+    private String leftArm;
 
-    @Column(nullable = true)
-    private Boolean rightArm;
+    private String rightArm;
 
-    @Column(nullable = true)
-    private Boolean leftForearm;
+    private String leftForearm;
 
-    @Column(nullable = true)
-    private Boolean rightForearm;
+    private String rightForearm;
 
-    @Column(nullable = true)
-    private Boolean leftHand;
+    private String leftHand;
 
-    @Column(nullable = true)
-    private Boolean rightHand;
+    private String rightHand;
 
-    @Column(nullable = true)
-    private Boolean leftNeck;
+    private String leftNeck;
 
-    @Column(nullable = true)
-    private Boolean rightNeck;
+    private String rightNeck;
 
-    @Column(nullable = true)
-    private Boolean scar;
+    private String scar;
 
-    @Column(nullable = true)
-    private Boolean deformity;
+    private String deformity;
 
 }
