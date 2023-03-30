@@ -110,7 +110,7 @@ Delegacia de Polícia de Investigações Gerais – DIG]]></text>
 			<textField textAdjust="StretchHeight">
 				<reportElement x="220" y="10" width="336" height="20" uuid="052c6474-846c-45e9-9a1e-0551ae7a5ff5"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{firstname}+$F{lastname}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{firstname}+' '+$F{lastname}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="183" y="10" width="37" height="20" uuid="faf4aac2-f86b-4df7-be81-57b210006e49">

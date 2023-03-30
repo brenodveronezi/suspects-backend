@@ -3,15 +3,12 @@ package br.com.dig.suspeitos.controller;
 import br.com.dig.suspeitos.dto.*;
 import br.com.dig.suspeitos.entity.*;
 import br.com.dig.suspeitos.exception.PersonNotFoundException;
-import br.com.dig.suspeitos.mapper.PersonMapper;
 import br.com.dig.suspeitos.repository.*;
 import br.com.dig.suspeitos.services.ImageDataService;
 import br.com.dig.suspeitos.services.PersonService;
 import lombok.AllArgsConstructor;
 import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.data.JRAbstractBeanDataSourceProvider;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.data.JRJpaDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,10 +16,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.*;
 
 @RestController
@@ -94,9 +90,12 @@ public class PersonController {
 
             JasperPrint mainReportPrint = JasperFillManager.fillReport(masterReport, reportParams, new JRBeanCollectionDataSource(personlist));
 
+            String filename = Person.getFirstname() + " " + Person.getLastname() + ".pdf";
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_PDF);
-            headers.setContentDispositionFormData("filename", "suspects-report.pdf");
+            headers.add("Content-Disposition", "inline; filename=" + filename);
+
 
             return new ResponseEntity<>(
                     JasperExportManager.exportReportToPdf(mainReportPrint), headers, HttpStatus.OK);
