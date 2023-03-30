@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport-tattoos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea1123ea-6f64-4d1e-9b10-3843b4fb5045">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper-reports-data-source"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="tattoos_id" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[$F{id}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM tattoos WHERE id = $P{tattoos_id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="deformity" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="deformity"/>
+		<property name="com.jaspersoft.studio.field.label" value="deformity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="face" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="face"/>
+		<property name="com.jaspersoft.studio.field.label" value="face"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftArm" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftArm"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftArm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftBack" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftBack"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftBack"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftBelly" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftBelly"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftBelly"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftChest" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftChest"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftChest"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftFeet" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftFeet"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftFeet"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftForearm" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftForearm"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftForearm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftHand" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftHand"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftHand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftLeg" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftLeg"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftLeg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="leftNeck" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leftNeck"/>
+		<property name="com.jaspersoft.studio.field.label" value="leftNeck"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightArm" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightArm"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightArm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightBack" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightBack"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightBack"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightBelly" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightBelly"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightBelly"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightChest" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightChest"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightChest"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightFeet" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightFeet"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightFeet"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightForearm" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightForearm"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightForearm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightHand" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightHand"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightHand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightLeg" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightLeg"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightLeg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="rightNeck" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rightNeck"/>
+		<property name="com.jaspersoft.studio.field.label" value="rightNeck"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<field name="scar" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="scar"/>
+		<property name="com.jaspersoft.studio.field.label" value="scar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tattoos"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="191" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="-21" width="595" height="24" uuid="2a63a166-a76e-4b2a-9980-c7530155ddea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TATUAGENS:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="-21" width="555" height="1" uuid="2e39e8c2-d940-488c-a45f-6336ab7e5e6a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="3" width="160" height="20" uuid="40a10a25-8496-4c8c-961c-c3d036375a1c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{face}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="3" width="110" height="20" uuid="5fdcc0e9-a247-4d00-b4d1-07618aa9f0d4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ROSTO:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="23" width="160" height="20" uuid="35516b9d-4f57-4622-bd2c-421964c8005d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftBack}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="23" width="130" height="20" uuid="518d52a7-e59b-4916-bb88-e6a581be5127"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COSTAS (esquerda):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="23" width="160" height="20" uuid="0939276e-b14a-4071-a224-4bf85ba2ae33">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightBack}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="23" width="110" height="20" uuid="12fd892c-efdd-4bae-8b6d-83d723c54534">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COSTAS (direita):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="43" width="160" height="20" uuid="9530a4d9-b43d-414d-840a-0f4ae8494738">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightChest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="43" width="110" height="20" uuid="12e8cae0-f076-4f92-aeab-22cec0e24e22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEITO (direita):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="63" width="160" height="20" uuid="cda1b31c-6939-4d92-85a5-5e2c6acc39e5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightBelly}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="63" width="110" height="20" uuid="dac69e2f-ee7c-49bd-9c40-6e976d3a5734"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BARRIGA (direita):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="83" width="160" height="20" uuid="d3f74ea9-0c9e-4e8f-bf5d-a146b9013122">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightLeg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="83" width="110" height="20" uuid="8a824d0a-74be-44d2-a867-0519b8af0240"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERNA (direita):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="103" width="160" height="20" uuid="6f508b1f-8153-47b6-8ed9-088fc065e719">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightFeet}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="103" width="110" height="20" uuid="29c43637-b32d-4f9a-bf4d-49c7bc585d10"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PÉ (direito):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="123" width="160" height="20" uuid="151ad4e9-b785-4400-a3a7-ba9715c808e5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightArm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="123" width="110" height="20" uuid="92be9900-fda3-447d-b37a-5e87804c6638"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRAÇO (direito):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="143" width="160" height="20" uuid="0953ee89-9978-41e4-8e47-7159e4e051ba">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightForearm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="143" width="110" height="20" uuid="eabc996e-8c84-4bf8-99f4-b455346862dc"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANTEBRAÇO (direito):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="109" y="163" width="160" height="20" uuid="81ecf9df-63e3-4aaf-a9d6-2c217b79c6f8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rightHand}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="163" width="110" height="20" uuid="3c549ba8-95c4-4d13-86ca-d991db1b8784"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MÃO (direita):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="43" width="160" height="20" uuid="363f6436-0e44-4f69-a92d-42a935a8ea38"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftChest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="43" width="130" height="20" uuid="e445724f-8227-4da2-8e18-e320d9f9529e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEITO (esquerda):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="63" width="160" height="20" uuid="0db2d61a-8868-4fe6-b1be-ec9443a837f9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftBelly}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="63" width="130" height="20" uuid="59a0dd56-0b61-403f-98cd-fd20953a9e43"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BARRIGA (esquerda):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="83" width="160" height="20" uuid="43773590-162b-4728-a205-1f13c2bb94ed"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftLeg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="83" width="130" height="20" uuid="40c58658-96e6-4886-919e-148b914a0c99"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERNA (esquerda):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="103" width="160" height="20" uuid="f61e53e8-efe3-45d1-bb5a-36da538ecd6b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftFeet}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="103" width="130" height="20" uuid="5daa0823-3733-4c17-a566-9f99d4e145e2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PÉ (esquerdo):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="123" width="160" height="20" uuid="3bd2c7dc-5a85-4931-a113-fa91637dcb94"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftArm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="123" width="130" height="20" uuid="df8f963c-32ea-49d7-8ecf-f005521c49c2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRAÇO (esquerdo):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="143" width="160" height="20" uuid="fa69d712-7afc-4740-8d53-fbefa96b050e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftForearm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="143" width="130" height="20" uuid="09c7e98c-64c7-4e42-a8df-e3a42d5ed809"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANTEBRAÇO (esquerdo):]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="409" y="163" width="160" height="20" uuid="9bac08d8-0f8c-4eb5-9724-9b57ca11acd9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{leftHand}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="163" width="130" height="20" uuid="4de40f24-4a4e-44ad-bd18-ebe92d989276"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MÃO (esquerda):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="3" width="130" height="20" uuid="02af993a-e9d1-47e9-921f-7f0fdc7ee8bf"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PESCOÇO:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="183" width="556" height="2" uuid="e022aea3-00c8-4ef7-b035-95848c15a145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-20" y="163" width="556" height="2" uuid="1fd28f91-6416-4702-99c7-1839d9a350d9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="143" width="556" height="1" uuid="7cd6ddf6-2341-436c-95cc-6f0f98fb28ef"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-20" y="123" width="556" height="2" uuid="e14b55b8-b1c4-4f79-a937-b6411081432d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="103" width="556" height="2" uuid="19aa21f9-487e-4e08-b581-b4d316204cf5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="83" width="556" height="2" uuid="30374cd9-d23b-4c3e-8685-195c5a9adc7a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="63" width="556" height="2" uuid="79c673d9-ea42-46e6-9762-6df73c71b4f4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="43" width="556" height="1" uuid="52332e06-7f57-4c27-90c8-1869c2b967ac"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-20" y="23" width="556" height="2" uuid="392a0f40-cda5-4138-a331-ef0feffcc80c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="2" width="556" height="2" uuid="053c3e89-a8af-435c-b86c-d6178e8d0c80">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="274" y="4" width="1" height="181" uuid="c961c105-9fd2-4179-b553-3999ca003032"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="536" y="-19" width="1" height="205" uuid="668dc288-2b12-4898-8f3e-8daeef9a6f53"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-20" y="-19" width="1" height="203" uuid="088a2be2-eb6f-4c80-aeb5-7ae42af8b6b5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport-particulars" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57b11433-9784-4cf4-94d6-d6c4a8a05fa7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper-reports-data-source"/>
+	<parameter name="particulars_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$F{id}]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM particulars WHERE id = $P{particulars_id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="hairColor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hairColor"/>
+		<property name="com.jaspersoft.studio.field.label" value="hairColor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="hairType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hairType"/>
+		<property name="com.jaspersoft.studio.field.label" value="hairType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="height" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="height"/>
+		<property name="com.jaspersoft.studio.field.label" value="height"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="maritalStatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="maritalStatus"/>
+		<property name="com.jaspersoft.studio.field.label" value="maritalStatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="skinColor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="skinColor"/>
+		<property name="com.jaspersoft.studio.field.label" value="skinColor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="skinEyes" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="skinEyes"/>
+		<property name="com.jaspersoft.studio.field.label" value="skinEyes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<field name="weight" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="weight"/>
+		<property name="com.jaspersoft.studio.field.label" value="weight"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="particulars"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="89" y="-21" width="165" height="20" uuid="e2fa35ee-4514-4a20-b628-fda7cb84ddd7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{hairColor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-21" y="-21" width="110" height="20" uuid="8863fd0b-d0d9-42d0-b807-68fdfcfab7e8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[COR DOS CABELOS:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="89" y="-1" width="165" height="20" uuid="03e768b0-5785-4f31-a5eb-d5085e3cabbe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{hairType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-21" y="-1" width="110" height="20" uuid="b47baf66-0bc3-4822-b477-3c0d36d19630">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[TIPO DE CABELOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="-21" width="165" height="20" uuid="28ab8576-041c-4dd9-a4fd-98148251a04b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{skinColor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="254" y="-21" width="115" height="20" uuid="6d938ff3-7aed-4c99-ba1d-7c321633e524">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[COR DA PELE:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="369" y="-1" width="165" height="20" uuid="cc8c2f26-4886-4aff-bbaa-37b75883ea23">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{skinEyes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="254" y="-1" width="115" height="20" uuid="459f3398-5e6d-4fd3-9249-9a890dc1c5ea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[COR DOS OLHOS:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="89" y="19" width="165" height="20" uuid="0b02a9a8-0e4f-4dae-83e8-3449e6208f2c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{height}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-21" y="19" width="110" height="20" uuid="e270f457-4acd-4693-9ea2-a56016c60f53">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[ALTURA:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="369" y="19" width="165" height="20" uuid="2109f247-08c0-4290-9bd9-dd5a35b8fd66">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="254" y="19" width="115" height="20" uuid="b808e95a-bbec-4663-9a2d-8d478178acd0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[PESO:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-21" y="18" width="557" height="1" uuid="17b27d33-dcff-475b-b1bc-89e8c3570ec3"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-21" y="38" width="557" height="1" uuid="ced3b41e-b34f-42a6-ae2e-f718e8ddcfe9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-21" y="-1" width="557" height="1" uuid="e254484d-8d1a-4c97-bbec-a9e9b2da5ec8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-20" y="-21" width="556" height="1" uuid="c9629829-59e4-4f48-85fb-e45967f33179">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-21" y="-20" width="1" height="59" uuid="177e7abf-adbb-4ba3-b99f-3a7afe789292"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="253" y="-20" width="1" height="59" uuid="d91e7869-dc43-4813-beb7-7cbdb8e4fa6a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="535" y="-20" width="1" height="59" uuid="596d36b6-4b4c-44f3-a12f-28b230b40702"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
