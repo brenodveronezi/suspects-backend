@@ -22,6 +22,7 @@ public class ImageUtil {
         try {
             outputStream.close();
         } catch (Exception e) {
+            // An empty catch block
         }
         return outputStream.toByteArray();
     }
@@ -38,8 +39,8 @@ public class ImageUtil {
             }
             outputStream.close();
         } catch (Exception exception) {
+            // An empty catch block
         }
         return outputStream.toByteArray();
     }
-
 }

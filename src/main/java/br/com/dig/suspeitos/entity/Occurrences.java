@@ -20,18 +20,13 @@ public class Occurrences {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = true)
     private LocalDate date;
 
-    @Column(nullable = true)
     private String procedure;
 
-    @Column(nullable = true)
     private String article;
 
-    @Column(nullable = true)
     private String law;
-
-    @Column(nullable = true)
+    
     private String historic;
 }
