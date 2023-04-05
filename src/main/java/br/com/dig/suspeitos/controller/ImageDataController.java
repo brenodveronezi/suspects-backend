@@ -1,6 +1,6 @@
 package br.com.dig.suspeitos.controller;
 
-import br.com.dig.suspeitos.response.ImageUploadResponse;
+import br.com.dig.suspeitos.response.ResponseFile;
 import br.com.dig.suspeitos.services.ImageDataService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/upload")
@@ -27,6 +28,10 @@ public class ImageDataController {
         return imageDataService.update(id, file);
     }
 
+    @GetMapping
+    public ResponseEntity<List<ResponseFile>> findAllImages(){
+        return imageDataService.getAllImages();
+    }
 
     @GetMapping("/{id}" )
     public ResponseEntity<byte[]> getImageByName(@PathVariable("id") String id){
