@@ -7,7 +7,9 @@ import br.com.dig.suspeitos.mapper.PersonMapper;
 import br.com.dig.suspeitos.repository.PersonRepository;
 import br.com.dig.suspeitos.response.MessageResponseDTO;
 import lombok.AllArgsConstructor;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +24,10 @@ public class PersonService {
     private ImageDataService imageDataService;
 
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
+
+    public List<Person> fetchFilteredCustomerDataAsList(String firstName, String lastName, Integer idadeDe, Integer idadeAte){
+        return personRepository.findByFirstNameLikeAndLastNameLike(firstName, lastName, idadeDe, idadeAte);
+    }
 
     public Person createPerson(PersonDTO personDTO) {
         Person personToSave = personMapper.toModel(personDTO);

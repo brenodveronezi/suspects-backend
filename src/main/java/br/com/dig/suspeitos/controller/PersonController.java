@@ -6,10 +6,12 @@ import br.com.dig.suspeitos.exception.PersonNotFoundException;
 import br.com.dig.suspeitos.repository.*;
 import br.com.dig.suspeitos.services.ImageDataService;
 import br.com.dig.suspeitos.services.PersonService;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,16 +43,24 @@ public class PersonController {
     private OccurrencesRepository occurrencesRepository;
 
     //private PersonMapper personMapper;
-
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public Person createPerson(@RequestBody PersonDTO personDTO){
-        return personService.createPerson(personDTO);
+    @Transactional
+    @GetMapping("/search")
+    public List<Person> fetchCustomersAsFilteredList(@RequestParam(defaultValue = "") String firstName,
+                                                     @RequestParam(defaultValue = "") String lastName,
+                                                     @RequestParam(defaultValue = "0") Integer idadeDe,
+                                                     @RequestParam(defaultValue = "100") Integer idadeAte){
+        return personService.fetchFilteredCustomerDataAsList(firstName, lastName, idadeDe, idadeAte);
     }
 
     @GetMapping
     public List<PersonDTO> listAll(){
         return personService.listAll();
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Person createPerson(@RequestBody PersonDTO personDTO){
+        return personService.createPerson(personDTO);
     }
 
     @GetMapping("/{id}")
