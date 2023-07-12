@@ -47,9 +47,9 @@ public class PersonController {
     @GetMapping("/search")
     public List<Person> fetchCustomersAsFilteredList(@RequestParam(defaultValue = "") String firstName,
                                                      @RequestParam(defaultValue = "") String lastName,
-                                                     @RequestParam(defaultValue = "0") Integer idadeDe,
-                                                     @RequestParam(defaultValue = "100") Integer idadeAte){
-        return personService.fetchFilteredCustomerDataAsList(firstName, lastName, idadeDe, idadeAte);
+                                                     @RequestParam(defaultValue = "0") Integer startAge,
+                                                     @RequestParam(defaultValue = "100") Integer endAge){
+        return personService.fetchFilteredCustomerDataAsList(firstName, lastName, startAge, endAge);
     }
 
     @GetMapping
